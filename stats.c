@@ -21,7 +21,6 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     float sum=0.0;
     float elementset[setlength-1];
 
-
     for(elementcount=0; elementcount <setlength; elementcount++)
     {
       elementset[elementcount] = numberset[elementcount]; /* numberset elements input's are taken from stats-test.cpp */ 
@@ -33,4 +32,14 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     }
 
     s.average = (float) sum/setlength; /* Calculate Average */ 
+}
+
+void emailAlerter(void)
+{
+    emailAlertCallCount++;
+}
+
+void ledAlerter(void)
+{
+    ledAlertCallCount++;
 }
